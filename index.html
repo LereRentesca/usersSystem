@@ -10,6 +10,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles/style.css">
     <title>Main</title>
 </head>
 <body>
@@ -42,7 +43,27 @@
         </nav>
     </header>
     <main>
-
+        <h2>Welcome to the Awesome User System</h2>
+        <h4>Please enter your credentials</h4>
+        <div class="container-md login-section">
+            <div class="alert-error hide">
+                Invalid Credentials!
+            </div>
+            <div class="alert-warning hide">
+                No Existing User's on the Site
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Username and Password</span>
+                <input type="text" aria-label="Username" class="form-control" id="txtUsername"
+                placeholder="Enter your email">
+                <input type="password" aria-label="Password" class="form-control" id="txtPassword"
+                placeholder="Enter your password">
+                <button type="button" class="btn btn-outline-success" id="loginBtn">Log In</button>
+            </div>
+        </div>
+        <div class="container-md gif">
+            <img src="https://media.tenor.com/CxjljfMO-98AAAAC/spongebob-rainbow.gif" alt="">
+        </div>
     </main>
     <footer>
 
@@ -53,5 +74,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="scripts/storeManager.js"></script>
+    <script src="scripts/display.js"></script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
