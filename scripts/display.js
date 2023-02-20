@@ -12,6 +12,9 @@ function display(usersArray){
             <td>${item.firstName}</td>
             <td>${item.lastName}</td>
             <td>${item.age}</td>
+            <td>${item.gender}</td>
+            <td style="background-color:${item.color}"></td>
+            <td>${item.payment}</td>
         </tr>`;
         TABLE.append(tr);
     }
@@ -23,10 +26,10 @@ function back(){
 
 $("#backBtn").click(back);
 
-function init(){
+function initDisplay(){
     console.log("Listing users....");
     let users = readUsers();
     display(users);
     console.log(users);
 }
-window.onload=init;
+window.onload=initDisplay;

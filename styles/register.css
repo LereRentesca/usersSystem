@@ -2,3 +2,45 @@ h2{
     margin-top: 20px;
     text-align: center;
 }
+
+.btn-gender{
+    width: 100px;
+}
+
+.gender-color{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.color{
+    display: flex;
+    align-items: flex-end;
+}
+
+.color label{
+    margin-right: 10px;
+}
+
+.gender label{
+    margin-right: 7px;
+}
+
+.registered-users{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+.registered-users h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}

@@ -23,9 +23,9 @@ function login(){
         }
     }
     if(!flag){
-        $(".alert-error").removeClass("hide");
+        $(".alert-danger").removeClass("hide");
         setTimeout(function(){
-            $(".alert-error").addClass("hide");
+            $(".alert-danger").addClass("hide");
         },5000);
     }
 }

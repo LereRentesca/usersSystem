@@ -1,7 +1,10 @@
-function User(firstName,lastName,age,email,password){
+function User(firstName,lastName,age,gender,color,payment,email,password){
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
+    this.gender = gender;
+    this.color = color;
+    this.payment = payment;
     this.email = email;
     this.password = password;
 }
@@ -68,11 +71,24 @@ function register(){
     let inputAge = $('#inputAge').val();
     let inputEmail = $('#inputEmail').val();
     let inputPassword = $('#inputPassword').val();
+    const radioButtons = document.querySelectorAll('input[name="options"]');
+    let inputColor = $('#inputColor').val();
+    let inputPayment = $('#inputPayment').val();
+    let selectedGender;
 
-    let newUser = new User(inputFirstName,inputLastName,inputAge,inputEmail,inputPassword);
+    for(const radioButton of radioButtons){
+        if(radioButton.checked){
+            selectedGender = radioButton.value;
+            break;
+        }
+    }
+
+    let newUser = new User(inputFirstName,inputLastName,inputAge,selectedGender,inputColor,inputPayment,inputEmail,inputPassword);
 
     if(validation(newUser)){
         $("input").val('');
+        $("#inputColor").val("#563d7c");
+        $("inputPayment").val("default");
         saveUser(newUser);
         window.location.replace("../index.html");
     }
@@ -91,5 +107,8 @@ function validatePass(){
 function init(){
     $('#btnSubmit').click(register);
     $("#inputPassword").keyup(validatePass);
+    console.log("Listing users....");
+    let users = readUsers();
+    display(users);
 }
 window.onload=init;
